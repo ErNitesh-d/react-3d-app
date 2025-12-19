@@ -172,8 +172,8 @@ This project is [MIT](LICENSE) licensed.
 **Nitesh Dagiya**
 
 - Portfolio: [nitesh-dagiya.netlify.app](https://nitesh-dagiya.netlify.app/)
-- GitHub: [@yourusername](https://github.com/yourusername)
-- LinkedIn: [Your LinkedIn](https://linkedin.com/in/yourprofile)
+- GitHub: (https://github.com/ErNitesh-d)
+- LinkedIn: (https://linkedin.com/in/nitesh-dagiya)
 - Email: nitinkhatri9898@gmail.com
 
 ## 🙏 Acknowledgments
