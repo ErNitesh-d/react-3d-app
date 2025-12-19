@@ -1,3 +1,4 @@
+
 import React, { Suspense } from "react";
 import { Canvas } from "@react-three/fiber";
 import {
@@ -55,3 +56,4 @@ const BallCanvas = ({ icon }) => {
 };
 
 export default BallCanvas;
+
