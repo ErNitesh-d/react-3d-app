@@ -64,71 +64,90 @@ const Contact = () => {
   };
 
   return (
-    <div
-      className={`xl:mt-12 flex xl:flex-row flex-col-reverse gap-10 overflow-hidden`}
+<div className="mt-0 flex flex-col-reverse xl:flex-row gap-8 w-full overflow-hidden">
+
+  {/* CONTACT FORM */}
+  <motion.div
+  variants={slideIn("left", "tween", 0.2, 1)}
+  className="flex-[0.6] bg-black-100 p-6 rounded-2xl"
+>
+  <p className={styles.sectionSubText}>Get in touch</p>
+  <h3 className={styles.sectionHeadText}>Contact.</h3>
+
+  <form
+    ref={formRef}
+    onSubmit={handleSubmit}
+    className="mt-3 flex flex-col gap-4"
+  >
+    {/* Name */}
+    <label className="flex flex-col">
+      <span className="text-white font-medium mb-1 text-sm">
+        Your Name
+      </span>
+      <input
+        type="text"
+        name="name"
+        value={form.name}
+        onChange={handleChange}
+        placeholder="Your name"
+        className="bg-tertiary py-2.5 px-4 text-sm placeholder:text-secondary
+                   text-white rounded-lg outline-none font-medium"
+      />
+    </label>
+
+    {/* Email */}
+    <label className="flex flex-col">
+      <span className="text-white font-medium mb-1 text-sm">
+        Your Email
+      </span>
+      <input
+        type="email"
+        name="email"
+        value={form.email}
+        onChange={handleChange}
+        placeholder="Your email"
+        className="bg-tertiary py-2.5 px-4 text-sm placeholder:text-secondary
+                   text-white rounded-lg outline-none font-medium"
+      />
+    </label>
+
+    {/* Message */}
+    <label className="flex flex-col">
+      <span className="text-white font-medium mb-1 text-sm">
+        Message
+      </span>
+      <textarea
+        rows={4}
+        name="message"
+        value={form.message}
+        onChange={handleChange}
+        placeholder="Your message"
+        className="bg-tertiary py-2.5 px-4 text-sm placeholder:text-secondary
+                   text-white rounded-lg outline-none font-medium resize-none"
+      />
+    </label>
+
+    {/* Button */}
+    <button
+      type="submit"
+      className="bg-tertiary py-2.5 px-6 rounded-lg w-fit
+                 text-white text-sm font-semibold shadow-md shadow-primary"
     >
-      <motion.div
-        variants={slideIn("left", "tween", 0.2, 1)}
-        className='flex-[0.75] bg-black-100 p-8 rounded-2xl'
-      >
-        <p className={styles.sectionSubText}>Get in touch</p>
-        <h3 className={styles.sectionHeadText}>Contact.</h3>
+      {loading ? "Sending..." : "Send Message"}
+    </button>
+  </form>
+</motion.div>
 
-        <form
-          ref={formRef}
-          onSubmit={handleSubmit}
-          className='mt-12 flex flex-col gap-8'
-        >
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Name</span>
-            <input
-              type='text'
-              name='name'
-              value={form.name}
-              onChange={handleChange}
-              placeholder="What's your good name?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your email</span>
-            <input
-              type='email'
-              name='email'
-              value={form.email}
-              onChange={handleChange}
-              placeholder="What's your web address?"
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
-          <label className='flex flex-col'>
-            <span className='text-white font-medium mb-4'>Your Message</span>
-            <textarea
-              rows={7}
-              name='message'
-              value={form.message}
-              onChange={handleChange}
-              placeholder='What you want to say?'
-              className='bg-tertiary py-4 px-6 placeholder:text-secondary text-white rounded-lg outline-none border-none font-medium'
-            />
-          </label>
+  {/* EARTH CANVAS */}
+  <motion.div
+    variants={slideIn("right", "tween", 0.2, 1)}
+    className="flex-[0.4] h-[300px] sm:h-[400px] xl:h-[450px]"
+  >
+    <EarthCanvas />
+  </motion.div>
 
-          <button
-            type='submit'
-            className='bg-tertiary py-3 px-8 rounded-xl outline-none w-fit text-white font-bold shadow-md shadow-primary'
-          >
-            {loading ? "Sending..." : "Send"}
-          </button>
-        </form>
-      </motion.div>
+</div>
 
-      <motion.div
-        variants={slideIn("right", "tween", 0.2, 1)}
-        className='xl:flex-1 xl:h-auto md:h-[550px] h-[350px]'
-      >
-        <EarthCanvas />
-      </motion.div>
-    </div>
   );
 };
 

@@ -39,7 +39,7 @@ import softqube from "./company/softqube.png"
 
 import hms from "./hms.png";
 import jobit from "./jobit.png";
-import tripguide from "./tripguide.png";
+import microservices from "./microservices.png";
 import library from "./library.png"
 export {
   niomart,
@@ -72,12 +72,12 @@ export {
   softqube,
   hms,
   jobit,
-  tripguide,
   library,
   postman,
   java,
   python,
   intellij,
   vscode,
-  mysql
+  mysql,
+  microservices
 };

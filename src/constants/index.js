@@ -4,13 +4,10 @@ import {
   creator,
   web,
   javascript,
-  html,
-  css,
+  microservices,
   reactjs,
   niomart,
   mongodb,
-  git,
-  figma,
   docker,
 
   softqube,
@@ -18,15 +15,9 @@ import {
 
   hms,
   library,
-  tripguide,
-  threejs,
-
-  postman,
-  intellij,
   python,
   java,
-  mysql,
-  vscode
+
 
   
 } from "../assets";
@@ -59,17 +50,13 @@ const services = [
     title: "Backend Developer",
     icon: backend,
   },
+  {
+    title: "Software Engineer",
+    icon: creator,
+  },
 ];
 
 const technologies = [
-  {
-    name: "HTML 5",
-    icon: html,
-  },
-  {
-    name: "CSS 3",
-    icon: css,
-  },
   {
     name: "JavaScript",
     icon: javascript,
@@ -87,29 +74,10 @@ const technologies = [
     icon: python,
   },
   {
-    name: "VS Code",
-    icon: vscode,
-  },
-  {
-    name: "MySql",
-    icon: mysql,
-  },
-  {
     name: "MongoDB",
     icon: mongodb,
   },
-  {
-    name: "Intellij IDe",
-    icon: intellij,
-  },
-  {
-    name: "git",
-    icon: git,
-  },
-  {
-    name: "Postman",
-    icon: postman,
-  },
+
   {
     name: "docker",
     icon: docker,
@@ -220,7 +188,7 @@ const projects = [
   {
     name: "NioMart (With Payment Gateway) ",
     description:
-      "Web application that allows users to browse and search products, view detailed product information and pricing, manage their shopping cart, and place orders through a user-friendly e-commerce interface.",
+      "Web application that allows users to browse and search products, view detailed product information and pricing, manage their shopping cart, place orders and make payment.",
     tags: [
       {
         name: "Java",
@@ -285,7 +253,7 @@ const projects = [
         color: "pink-text-gradient",
       },
     ],
-    image: tripguide,
+    image: microservices,
     source_code_link: "https://github.com/ErNitesh-d",
   },
 ];
